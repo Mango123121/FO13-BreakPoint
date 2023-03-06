@@ -3,12 +3,12 @@ REM Server Tools configuration file. Lines starting with REM are comments and ig
 REM on/off config options are considered "on" if they have anything (even 0) and "off" if they are blank or commented out.
 
 REM This must be set to the name of your dme without the .dme part. (should be fine leaving this alone unless you renamed the code)
-set PROJECTNAME=fortune13
+set PROJECTNAME=tgstation
 
 
 REM location of the repo.
-set REPO_URL=https://github.com/nokele/Fortune13.git
-REM set REPO_URL=git@github.com:nokele/Fortune13.git
+set REPO_URL=https://github.com/Malerus/Fallout-13-Breakpoint
+REM set REPO_URL=git@github.com:Malerus/Fallout-13-Breakpoint
 
 
 REM What branch of the repo to use.
@@ -22,7 +22,7 @@ REM set MAPFILE=ministation
 
 
 REM port to use (only used to start the server in the start-server script)
-set PORT=1337
+set PORT=1338
 
 
 REM This is the channel to log updates to. Leave blank to log to the normal channel (this is done via the tgstation bot, optional)

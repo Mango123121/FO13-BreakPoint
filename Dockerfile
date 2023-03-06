@@ -65,7 +65,7 @@ FROM dm_base as build
 
 COPY . .
 
-RUN DreamMaker -max_errors 0 fortune13.dme \
+RUN DreamMaker -max_errors 0 tgstation.dme \
     && tools/deploy.sh /deploy \
 	&& rm /deploy/*.dll
 
