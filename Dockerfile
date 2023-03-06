@@ -65,9 +65,12 @@ FROM dm_base as build
 
 COPY . .
 
-RUN DreamMaker -max_errors 0 tgstation.dme && tools/deploy.sh /deploy
+RUN DreamMaker -max_errors 0 fortune13.dme \
+    && tools/deploy.sh /deploy \
+	&& rm /deploy/*.dll
 
 FROM dm_base
+
 
 EXPOSE 1337
 
@@ -87,4 +90,4 @@ RUN ln -s /tgstation/libBSQL.so /root/.byond/bin/libBSQL.so
 
 VOLUME [ "/tgstation/config", "/tgstation/data" ]
 
-ENTRYPOINT [ "DreamDaemon", "tgstation.dmb", "-port", "1337", "-trusted", "-close", "-verbose" ]
+ENTRYPOINT [ "DreamDaemon", "tgstation.dmb", "-port", "1338", "-trusted", "-close", "-verbose" ]
