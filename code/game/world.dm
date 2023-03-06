@@ -7,13 +7,7 @@ GLOBAL_PROTECT(security_mode)
 //This happens after the Master subsystem new(s) (it's a global datum)
 //So subsystems globals exist, but are not initialised
 /world/New()
-	enable_debugger()
-
-#if DM_VERSION >= 513 && DM_BUILD >= 1506
-	world.Profile(PROFILE_START)
-#endif
-
-	log_world("World loaded at [TIME_STAMP("hh:mm:ss", FALSE)]!")
+	log_world("World loaded at [time_stamp()]!")
 
 	SetupExternalRSC()
 
