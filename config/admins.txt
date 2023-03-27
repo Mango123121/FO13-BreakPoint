@@ -9,6 +9,6 @@
 ###############################################################################################
 
 Malerus = Host
+Windbomb = Host
+lestatanderson = Host
 Tadano = Admin
-Windbomb = Admin
-lestatanderson = Admin
