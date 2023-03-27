@@ -167,6 +167,7 @@
 	var/suite
 
 	// This group of variables can be null to represent a wild card
+	var/major
 	/// The minor version number. null for wildcards
 	var/minor
 	/// The patch version number. null for wildcards
