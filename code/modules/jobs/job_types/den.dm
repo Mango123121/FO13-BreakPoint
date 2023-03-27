@@ -249,6 +249,12 @@ Doctor
 		)
 	box = null
 
+/datum/outfit/job/den/f13dendoc/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	. = ..()
+	if(visualsOnly)
+		return
+	ADD_TRAIT(H, TRAIT_CHEMWHIZ, src)
+
 /*
 Preacher
 */
