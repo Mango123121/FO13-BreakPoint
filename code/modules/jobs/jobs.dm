@@ -46,7 +46,8 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Legion Venator",
 	"Legion Explorer",
 	"Legion Scout",
-	"Camp Follower"
+	"Camp Follower",
+	"Recruit Legionnaire"
 ))
 
 GLOBAL_LIST_INIT(ncr_positions, list(
@@ -64,7 +65,8 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Scout",
 	"NCR Veteran Ranger",
 	"NCR Patrol Ranger",
-	"NCR Recon Ranger"
+	"NCR Recon Ranger",
+	"NCR Recruit"
 ))
 
 GLOBAL_LIST_INIT(vault_positions, list(
