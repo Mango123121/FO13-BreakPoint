@@ -12,3 +12,4 @@ Malerus = Host
 Windbomb = Host
 lestatanderson = Host
 Tadano = Admin
+k4rl = Badmin
