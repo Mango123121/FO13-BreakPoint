@@ -230,7 +230,7 @@ RULESURL https://discord.gg/qQGHGXhRAw
 
 
 ## Github address
-GITHUBURL hhttps://github.com/Malerus/Fallout-13-Breakpoint
+GITHUBURL https://github.com/Foundation-19/FO13-BreakPoint
 
 ## Round specific stats address
 ## Link to round specific parsed logs; IE statbus. It is appended with the RoundID automatically by ticker/Reboot()
@@ -246,7 +246,7 @@ GITHUBURL hhttps://github.com/Malerus/Fallout-13-Breakpoint
 ## Github repo id
 ##This can be found by going to https://api.github.com/users/<user name here>/repos
 ##Or https://api.github.com/orgs/<org name here>/repos if the repo owner is an organization
-GITHUBREPOID 568638897
+GITHUBREPOID 619930200
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
 # BANAPPEALS http://justanotherday.example.com
