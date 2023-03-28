@@ -148,11 +148,11 @@
 	if(multiorgasms == 1)
 		add_logs(partner, src, "came on")
 
-	if(multiorgasms > (sexual_potency * 0.34)) //AAAAA, WE DONT WANT NEGATIVES HERE, RE
-		refactory_period = rand(250, 400) - sexual_potency//sex cooldown
+	if(multiorgasms > (sexual_potency * 1)) //AAAAA, WE DONT WANT NEGATIVES HERE, RE
+		refactory_period = 1 - sexual_potency//sex cooldown
 		src.set_drugginess(rand(20, 30))
 	else
-		refactory_period = rand(250, 400) - sexual_potency
+		refactory_period = 1 - sexual_potency
 		src.set_drugginess(rand(5, 10))
 
 /mob/living/cum(mob/living/partner, target_orifice)
