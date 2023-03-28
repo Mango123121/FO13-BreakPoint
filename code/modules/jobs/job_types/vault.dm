@@ -31,7 +31,7 @@ here's a tip, go search DEFINES/access.dm
 /*
 Overseer
 */
-/*
+
 /datum/job/vault/f13overseer
 	title = "Overseer"
 	flag = F13OVERSEER
@@ -447,4 +447,3 @@ Vault Engineer
 	if(SSmapping.config.map_name == "Pahrump")
 		total_positions = 0
 		spawn_positions = 0 
-*/

@@ -14,9 +14,9 @@ Format:
 endmap
 
 map pahrump
-	default
 	votable
 endmap
 map boxstation
+	default
 	votable
 endmap
