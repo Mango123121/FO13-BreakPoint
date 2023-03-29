@@ -38,8 +38,8 @@
 #define CANPARALYZE		(1<<5)
 
 //Health Defines
-#define HEALTH_THRESHOLD_CRIT -90
-#define HEALTH_THRESHOLD_FULLCRIT -140
+#define HEALTH_THRESHOLD_CRIT -65
+#define HEALTH_THRESHOLD_FULLCRIT -130
 #define HEALTH_THRESHOLD_DEAD -165
 
 //Actual combat defines
