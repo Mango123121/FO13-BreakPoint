@@ -195,7 +195,6 @@
 		return
 	user.visible_message("<span class='warning'>[user] [departing_mob == user ? "is trying to leave the wasteland!" : "is trying to send [departing_mob] away!"]</span>", "<span class='notice'>You [departing_mob == user ? "are trying to leave the wasteland." : "are trying to send [departing_mob] away."]</span>")
 	icon_state = "matrix_going" // ALERT, WEE WOO
-	update_icon()
 	in_use = TRUE
 	if(!do_after(user, 50, target = src))
 		icon_state = "matrix"
@@ -203,7 +202,6 @@
 		return
 	icon_state = "matrix"
 	in_use = FALSE
-	update_icon()
 	var/dat = "[key_name(user)] has despawned [departing_mob == user ? "themselves" : departing_mob], job [departing_mob.job], at [AREACOORD(src)]. Contents despawned along:"
 	if(!length(departing_mob.contents))
 		dat += " none."
