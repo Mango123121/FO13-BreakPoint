@@ -90,6 +90,7 @@
 	ignore_flags = 1 //so you can medipen through hardsuits
 	container_type = DRAWABLE
 	flags_1 = null
+	var/syringe_self_delay = FALSE
 	list_reagents = list("epinephrine" = 10)
 
 /obj/item/reagent_containers/hypospray/medipen/suicide_act(mob/living/carbon/user)
@@ -100,6 +101,13 @@
 	if(!reagents.total_volume)
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 		return
+	
+	if(M == user)
+		M.visible_message("<span class='notice'>[user] attempts to inject themselves with the [src].</span>")
+		if(syringe_self_delay)
+			if(!do_mob(user, M, syringe_self_delay))
+				return FALSE
+		to_chat(M, "<span class='notice'>You jab yourself with the [src].</span>")
 	..()
 	if(!iscyborg(user))
 		reagents.maximum_volume = 0 //Makes them useless afterwards
@@ -179,6 +187,7 @@
 	name = "stimpak"
 	desc = "A handheld delivery system for medicine, used to rapidly heal physical damage to the body."
 	icon_state = "stimpakpen"
+	syringe_self_delay = 10
 	volume = 10
 	amount_per_transfer_from_this = 10
 	list_reagents = list("stimpak" = 10)
@@ -187,6 +196,7 @@
 	name = "super stimpak"
 	desc = "The super version comes in a hypodermic, but with an additional vial containing more powerful drugs than the basic model and a leather belt to strap the needle to the injured limb."
 	icon_state = "superstimpakpen"
+	syringe_self_delay = 10
 	amount_per_transfer_from_this = 10
 	list_reagents = list("super_stimpak" = 10)
 

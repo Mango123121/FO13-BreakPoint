@@ -226,7 +226,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	force_unwielded = 10
-	force_wielded = 56
+	force_wielded = 30
 	attack_verb = list("axed", "chopped", "cleaved", "torn", "hacked")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = IS_SHARP
@@ -275,7 +275,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	var/w_class_on = WEIGHT_CLASS_BULKY
 	force_unwielded = 3
-	force_wielded = 34
+	force_wielded = 25
 	wieldsound = 'sound/weapons/saberon.ogg'
 	unwieldsound = 'sound/weapons/saberoff.ogg'
 	hitsound = "swing_hit"
@@ -461,7 +461,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	force_unwielded = 25
-	force_wielded = 40
+	force_wielded = 30
 	throwforce = 25
 	throw_speed = 4
 	embedding = list("embedded_impact_pain_multiplier" = 3)
@@ -710,7 +710,7 @@
 	throwforce = 15
 	w_class = WEIGHT_CLASS_BULKY
 	force_unwielded = 7
-	force_wielded = 15
+	force_wielded = 20
 	attack_verb = list("attacked", "impaled", "pierced", "perforated")
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	sharpness = IS_SHARP
@@ -734,7 +734,7 @@
 	force = 24
 	throwforce = 50
 	force_unwielded = 24
-	force_wielded = 34
+	force_wielded = 30
 
 /obj/item/twohanded/pitchfork/demonic/ascended
 	force = 100
@@ -787,7 +787,7 @@
 	name = "high frequency blade"
 	desc = "A potent weapon capable of cutting through nearly anything. Wielding it in two hands will allow you to deflect gunfire."
 	force_unwielded = 20
-	force_wielded = 40
+	force_wielded = 30
 	armour_penetration = 100
 	block_chance = 40
 	throwforce = 20
@@ -826,7 +826,7 @@
 	icon_state = "bone_axe0"
 	name = "bone axe"
 	desc = "A large, vicious axe crafted out of several sharpened bone plates and crudely tied together. Made of monsters, by killing monsters, for killing monsters."
-	force_wielded = 56
+	force_wielded = 30
 
 /obj/item/twohanded/fireaxe/boneaxe/update_icon()
 	icon_state = "bone_axe[wielded]"
@@ -904,7 +904,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	force_unwielded = 10
-	force_wielded = 35
+	force_wielded = 25
 	throwforce = 15
 	attack_verb = list("beat", "smacked", "clubbed", "clobbered")
 	w_class = WEIGHT_CLASS_NORMAL
@@ -922,7 +922,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/polearms_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	force_unwielded = 20
-	force_wielded = 56
+	force_wielded = 30
 	throwforce = 20
 	attack_verb = list("bashed", "pounded", "bludgeoned", "pummeled", "thrashed")
 	w_class = WEIGHT_CLASS_BULKY

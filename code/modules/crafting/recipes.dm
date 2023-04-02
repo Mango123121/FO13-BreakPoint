@@ -661,30 +661,30 @@
 /datum/crafting_recipe/healpowder
 	name = "Healing powder"
 	result = /obj/item/reagent_containers/pill/patch/healingpowder
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 2,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 2)
-	time = 50
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 1)
+	time = 10
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/healpoultice
 	name = "Healing poultice"
 	result = /obj/item/reagent_containers/pill/patch/healpoultice
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 2,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
-				/obj/item/reagent_containers/food/snacks/grown/feracactus = 2,
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
+				/obj/structure/flora/wasteplant/wild_agave = 1,
 				/obj/item/reagent_containers/food/snacks/grown/fungus = 1)
-	time = 80
+	time = 10
 	category = CAT_MEDICAL
 
 
 /datum/crafting_recipe/stimpak
 	name = "Stimpak"
 	result = /obj/item/reagent_containers/hypospray/medipen/stimpak
-	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 2,
-				/obj/item/reagent_containers/food/snacks/grown/xander = 2,
+	reqs = list(/obj/item/reagent_containers/food/snacks/grown/broc = 1,
+				/obj/item/reagent_containers/food/snacks/grown/xander = 1,
 				/obj/item/reagent_containers/syringe = 1)
 	tools = list(/obj/item/lighter, /obj/item/reagent_containers/glass/beaker)
-	time = 50
+	time = 20
 	category = CAT_MEDICAL
 
 
@@ -692,10 +692,11 @@
 	name = "Super Stimpak"
 	result = /obj/item/reagent_containers/hypospray/medipen/stimpak/super
 	reqs = list(/obj/item/reagent_containers/hypospray/medipen/stimpak = 1,
-				/obj/item/stack/sheet/leather = 2,
-				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 2)
+				/obj/item/stack/sheet/leather = 1,
+				/obj/item/reagent_containers/food/snacks/grown/mutfruit = 1,
+				/datum/reagent/consumable/nuka_cola = 50)
 	tools = list(/obj/item/lighter, /obj/item/reagent_containers/glass/beaker)
-	time = 80
+	time = 30
 	category = CAT_MEDICAL
 
 /datum/crafting_recipe/slavecollar

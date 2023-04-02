@@ -78,6 +78,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	item_state = "salvagedmachete"
 	slot_flags = ITEM_SLOT_BELT
+	force = 20
 
 /obj/item/claymore/machete/gladius
 	name = "machete gladius"
@@ -87,7 +88,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
 	item_state = "machete"
 	slot_flags = ITEM_SLOT_BELT
-	force = 35
+	force = 25
 	block_chance = 10
 
 /obj/item/claymore/machete/pipe
@@ -96,7 +97,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	icon_state = "pipe"
 	item_state = "pipe"
 	attack_verb = list("mashed", "bashed", "piped", "hit", "bludgeoned", "whacked", "bonked")
-	force = 25
 	sharpness = IS_BLUNT
 
 /obj/item/claymore/machete/pipe/tireiron
@@ -112,7 +112,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	icon_state = "golf9"
 	item_state = "golf9"
 	attack_verb = list("mashed", "bashed", "piped", "hit", "bludgeoned", "whacked", "bonked")
-	force = 25
 	sharpness = IS_BLUNT
 
 /obj/item/claymore/machete/golf/teniron
@@ -120,7 +119,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	desc = "This old and quite deadly 10 iron is bent and battered after many years of use by anyone who found it good enough to break bones and crash skulls."
 	icon_state = "golf10"
 	item_state = "golf10"
-	force = 30
 
 /obj/item/claymore/machete/pipe/pan
 	name = "frying pan"
@@ -344,7 +342,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	lefthand_file = 'icons/mob/inhands/equipment/shields_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/shields_righthand.dmi'
 	force = 2
-	throwforce = 20 //This is never used on mobs since this has a 100% embed chance.
+	throwforce = 15 //This is never used on mobs since this has a 100% embed chance.
 	throw_speed = 4
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 100, "embedded_fall_chance" = 0)
 	w_class = WEIGHT_CLASS_SMALL
@@ -363,8 +361,8 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
 	icon_state = "throw_spear"
 	item_state = "tribalspear"
-	force = 20
-	throwforce = 35
+	force = 25
+	throwforce = 30
 	item_flags = SLOWS_WHILE_IN_HAND
 	slowdown = 0.3
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 60, "embedded_fall_chance" = 20)
@@ -387,10 +385,10 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	name = "harpoon"
 	desc = "A rusty spear-like instrument previously used in fishing, whaling and sealing - now used for robbing, raiding and manhunting."
 	icon_state = "harpoon"
-	force = 15
+	force = 25
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = SLOT_BACK
-	throwforce = 20
+	throwforce = 30
 	throw_speed = 4
 	armour_penetration = 5
 	materials = list(MAT_METAL=1150, MAT_WOOD=2075)
@@ -404,7 +402,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	desc = "A sharp, concealable, spring-loaded knife."
 	flags_1 = CONDUCT_1
-	force = 3
+	force = 15
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 5
 	throw_speed = 3
@@ -419,9 +417,9 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	extended = !extended
 	playsound(src.loc, 'sound/weapons/batonextend.ogg', 50, 1)
 	if(extended)
-		force = 25
+		force = 15
 		w_class = WEIGHT_CLASS_NORMAL
-		throwforce = 25
+		throwforce = 5
 		icon_state = "switchblade_ext"
 		attack_verb = list("slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 		hitsound = 'sound/weapons/bladeslice.ogg'
@@ -467,7 +465,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	item_state = "stick"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	force = 5
+	force = 15
 	throwforce = 5
 	w_class = WEIGHT_CLASS_SMALL
 	materials = list(MAT_METAL=50)
@@ -530,7 +528,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	righthand_file = 'icons/mob/inhands/weapons/chainsaw_righthand.dmi'
 	item_flags = NODROP | ABSTRACT | DROPDEL
 	w_class = WEIGHT_CLASS_HUGE
-	force = 56
+	force = 35
 	throwforce = 0
 	throw_range = 0
 	throw_speed = 0

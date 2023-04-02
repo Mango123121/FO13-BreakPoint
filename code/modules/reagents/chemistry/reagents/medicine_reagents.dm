@@ -1267,7 +1267,7 @@
 	reagent_state = LIQUID
 	color = "#C8A5DC"
 	taste_description = "grossness"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	metabolization_rate = 4 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 
 /datum/reagent/medicine/stimpak/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
@@ -1280,12 +1280,12 @@
 
 /datum/reagent/medicine/stimpak/on_mob_life(mob/living/carbon/M)
 	if(!M.reagents.has_reagent("healing_powder")) // We don't want these healing items to stack, so we only apply the healing if these chems aren't found.We only check for the less powerful chems, so the least powerful one always heals.
-		M.adjustBruteLoss(-4*REM, 0)
-		M.adjustFireLoss(-4*REM, 0)
-		M.adjustToxLoss(-1*REM, 0)
-		M.AdjustStun(-5, 0)
-		M.AdjustKnockdown(-5, 0)
-		M.adjustStaminaLoss(-2*REM, 0)
+		M.adjustBruteLoss(-6*REM, 0)
+		M.adjustFireLoss(-6*REM, 0)
+		M.adjustToxLoss(-6*REM, 0)
+		M.AdjustStun(-6, 0)
+		M.AdjustKnockdown(-6, 0)
+		M.adjustStaminaLoss(-6*REM, 0)
 		. = 1
 	..()
 
@@ -1301,18 +1301,18 @@ datum/reagent/medicine/super_stimpak
 	description = "Chemicals found in pre-war stimpaks."
 	reagent_state = LIQUID
 	color = "#e50d0d"
-	metabolization_rate = 0.5 * REAGENTS_METABOLISM
-	overdose_threshold = 20
+	metabolization_rate = 7 * REAGENTS_METABOLISM
+	overdose_threshold = 15
 
 datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	if(!M.reagents.has_reagent("healing_poultice") && !M.reagents.has_reagent("stimpak") && !M.reagents.has_reagent("healing_powder")) // We don't want these healing items to stack, so we only apply the healing if these chems aren't found. We only check for the less powerful chems, so the least powerful one always heals.
-		M.adjustBruteLoss(-6*REM)
-		M.adjustFireLoss(-6*REM)
-		M.adjustOxyLoss(-2*REM)
-		M.adjustToxLoss(-2*REM, 0)
-		M.AdjustStun(-10, 0)
-		M.AdjustKnockdown(-10, 0)
-		M.adjustStaminaLoss(-4*REM, 0)
+		M.adjustBruteLoss(-20*REM)
+		M.adjustFireLoss(-20*REM)
+		M.adjustOxyLoss(-20*REM)
+		M.adjustToxLoss(-20*REM, 0)
+		M.AdjustStun(-20, 0)
+		M.AdjustKnockdown(-20, 0)
+		M.adjustStaminaLoss(-20*REM, 0)
 		. = 1
 	..()
 
@@ -1329,16 +1329,18 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	reagent_state = LIQUID
 	color ="#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 0.4 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
+	metabolization_rate = 1 * REAGENTS_METABOLISM //in between powder/stimpaks and poultice/superstims?
 	overdose_threshold = 30
 
 datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	if(!M.reagents.has_reagent("stimpak") && !M.reagents.has_reagent("healing_powder")) //should prevent stacking with healing powder and stimpaks
-		M.adjustFireLoss(-3*REM)
-		M.adjustBruteLoss(-3*REM)
-		M.hallucination = max(M.hallucination, 5)
+		M.adjustFireLoss(-1.6*REM)
+		M.adjustBruteLoss(-1.6*REM)
+		M.AdjustStun(-1.6*REM)
+		M.AdjustKnockdown(-1.6*REM)
+		M.adjustStaminaLoss(-1.6*REM)
 		. = 1
-	..()
+		..()
 
 /datum/reagent/medicine/bitter_drink/overdose_process(mob/living/M)
 	M.adjustToxLoss(2*REM, 0)
@@ -1353,13 +1355,15 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	reagent_state = SOLID
 	color = "#A9FBFB"
 	taste_description = "bitterness"
-	metabolization_rate = 0.3 * REAGENTS_METABOLISM
+	metabolization_rate = 1 * REAGENTS_METABOLISM
 	overdose_threshold = 30
 
 /datum/reagent/medicine/healing_powder/on_mob_life(mob/living/carbon/M)
-	M.adjustFireLoss(-3*REM)
-	M.adjustBruteLoss(-3*REM)
-	M.hallucination = max(M.hallucination, 5)
+	M.adjustFireLoss(-0.8*REM)
+	M.adjustBruteLoss(-0.8*REM)
+	M.AdjustStun(-0.8*REM)
+	M.AdjustKnockdown(-0.8*REM)
+	M.adjustStaminaLoss(-0.8*REM)
 	. = 1
 	..()
 
@@ -1383,16 +1387,18 @@ datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/M)
 	description = "Restores limb condition and heals rapidly."
 	reagent_state = LIQUID
 	color = "#C8A5DC"
-	metabolization_rate = 0.2 * REAGENTS_METABOLISM
+	metabolization_rate = 1 * REAGENTS_METABOLISM
 	overdose_threshold = 20
 
 /datum/reagent/medicine/healing_poultice/on_mob_life(mob/living/M)
 	if(!M.reagents.has_reagent("stimpak") && !M.reagents.has_reagent("healing_powder")) // We don't want these healing items to stack, so we only apply the healing if these chems aren't found. We only check for the less powerful chems, so the least powerful one always heals.
-		M.adjustFireLoss(-4*REM)
-		M.adjustBruteLoss(-4*REM)
-		M.adjustOxyLoss(-2*REM)
-		M.hallucination = max(M.hallucination, 5)
-	..()
+		M.adjustFireLoss(-4.5*REM)
+		M.adjustBruteLoss(-4.5*REM)
+		M.AdjustStun(-4.5*REM)
+		M.AdjustKnockdown(-4.5*REM)
+		M.adjustStaminaLoss(-4.5*REM)
+		. = 1
+		..()
 
 /datum/reagent/medicine/healing_poultice/reaction_mob(mob/living/M, method=TOUCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)

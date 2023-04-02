@@ -424,16 +424,12 @@
 	addiction_threshold = 10
 	metabolization_rate = 2 * REAGENTS_METABOLISM
 
-/datum/reagent/drug/turbo/on_mob_add(mob/M)
+/datum/reagent/drug/turbo/on_mob_add(mob/living/L)
 	..()
-	if(isliving(M))
-		var/mob/living/L = M
-		L.add_trait(TRAIT_GOTTAGOREALLYFAST, id)
+	L.add_trait(TRAIT_GOTTAGOREALLYFAST, id)
 
-/datum/reagent/drug/turbo/on_mob_delete(mob/M)
-	if(isliving(M))
-		var/mob/living/L = M
-		L.remove_trait(TRAIT_GOTTAGOREALLYFAST, id)
+/datum/reagent/drug/turbo/on_mob_delete(mob/living/L)
+	L.remove_trait(TRAIT_GOTTAGOREALLYFAST, id)
 	..()
 
 /datum/reagent/drug/turbo/on_mob_life(mob/living/carbon/M)
